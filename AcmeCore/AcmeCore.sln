@@ -1,0 +1,6 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAKE-GUID}") = "AcmeCore", "AcmeCore.sqlproj", "{FAKE-PROJECT-GUID}"
+EndProject
+Global
+EndGlobal

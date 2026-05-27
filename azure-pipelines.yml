@@ -1,0 +1,29 @@
+trigger:
+  branches:
+    include:
+      - dev
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: ValidateDatabaseProject
+    jobs:
+      - job: SqlProjAudit
+        steps:
+          - script: |
+              echo "Checking SQL project file includes..."
+              echo "Demo failure: AcmeCore/migrations/V003_add_payment_risk_score.sql exists but is not included in AcmeCore.sqlproj"
+              exit 1
+            displayName: "Validate SQLProj includes"
+
+  - stage: BuildDacpac
+    dependsOn: ValidateDatabaseProject
+    jobs:
+      - job: Build
+        steps:
+          - script: |
+              echo "Building DACPAC..."
+              echo "SQL71501: Unresolved reference to object [dbo].[PaymentRisk]"
+              exit 1
+            displayName: "Build DACPAC"

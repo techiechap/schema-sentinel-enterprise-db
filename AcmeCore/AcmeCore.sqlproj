@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.Build.Sql/0.1.12-preview">
+  <PropertyGroup>
+    <Name>AcmeCore</Name>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Build Include="dbo\Tables\Customer.sql" />
+    <Build Include="dbo\Tables\Payment.sql" />
+    <Build Include="dbo\StoredProcedures\usp_UpdatePaymentRisk.sql" />
+    <Build Include="Security\Roles.sql" />
+    <Build Include="billing\Tables\Invoice.sql" />
+    <Build Include="customer\Views\vw_CustomerSummary.sql" />
+    <Build Include="operations\StoredProcedures\usp_ReconcilePayments.sql" />
+    <Build Include="Database Triggers\trg_AuditPayment.sql" />
+  </ItemGroup>
+</Project>
