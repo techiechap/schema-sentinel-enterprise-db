@@ -3,6 +3,12 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    SELECT COUNT(*) AS PaymentCount
-    FROM [dbo].[Payment];
+    -- Demo object-collision risk:
+    -- This branch changes Payment reconciliation while another branch adds PaymentRisk.
+    SELECT
+        p.CustomerId,
+        COUNT(*) AS PaymentCount,
+        SUM(p.Amount) AS TotalAmount
+    FROM [dbo].[Payment] p
+    GROUP BY p.CustomerId;
 END;
