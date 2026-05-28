@@ -1,0 +1,38 @@
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build/runtime artifacts
+bin/
+obj/
+dist/
+build/
+coverage/
+logs/
+*.log
+
+# SQL Server / DACPAC / publish artifacts
+*.dacpac
+*.bacpac
+*.publish.xml
+*.sqlplan
+*.dbmdl
+*.jfm
+
+# Local secrets/config
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+
+# Local scratch
+.local/
+scratch/
+archive/
