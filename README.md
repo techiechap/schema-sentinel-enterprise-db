@@ -16,7 +16,7 @@ No real client names, schemas, data, code, wiki notes, or confidential content a
 
 SchemaSentinel is demonstrated against a synthetic enterprise-style SQL Server database project:
 
-https://github.com/techiechap/schema-sentinel-demo-enterprise-db
+https://github.com/techiechap/schema-sentinel-enterprise-db
 
 The demo repository intentionally includes safe release-risk patterns:
 
